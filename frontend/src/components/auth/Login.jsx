@@ -7,6 +7,10 @@ import { USER_API_END_POINT } from '@/utils/constant'
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { setLoading } from "@/redux/authSlice";
+import { Button } from "../ui/button";
+import { Loader, Loader2 } from "lucide-react";
 
 function Login() {
   const [input, setInput] = useState({
@@ -14,9 +18,9 @@ function Login() {
     password: "",
     role: "",
 });
-
+ const {loading} = useSelector(store=> store.auth)
 const navigate = useNavigate();
-
+const dispatch = useDispatch()
 
 const changeEventHandler = (e) => {
     setInput({ ...input, [e.target.name]: e.target.value });
@@ -25,7 +29,7 @@ const changeEventHandler = (e) => {
 const submitHandler = async (e) => {
     e.preventDefault();
     try {
-        
+        dispatch(setLoading(true))
         const res = await axios.post(`${USER_API_END_POINT}/login`, input, {
             headers: {
                 "Content-Type": "application/json"
@@ -40,7 +44,9 @@ const submitHandler = async (e) => {
     } catch (error) {
         console.log(error);
         toast.error(error.response.data.message);
-    } 
+    } finally{
+      dispatch(setLoading(false))
+    }
 }
   return (
     <div>
@@ -104,9 +110,12 @@ const submitHandler = async (e) => {
 
            
           </div>
-          <button className="bg-black text-white p-3 rounded-lg uppercase hover:opacity-60 w-full mt-4 ">
+          {
+            loading? <Button className="w-full my-4"><Loader2 className="mr-2 h-4 w-4 animate-spin"/>Please wait</Button> :<button className="bg-black text-white p-3 rounded-lg uppercase hover:opacity-60 w-full mt-4 ">
             Login
           </button>
+          }
+          
           <div className='flex gap-2 mt-5'>
         <p>Dont have an account?</p>
         <Link to={"/signup"}>
