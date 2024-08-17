@@ -16,24 +16,29 @@ function HeroSection() {
           </h1>
         </div>
       </div>
-      <div className="w-[70%] text-sm sm:w-[50%] md:w-[70%] xl:w-[60%] sm:text-xl mx-auto mt-2   ">
-        <p className="">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum maxime
-          suscipit, quod
-        </p>
-      </div>
+      
+      <div className="w-full sm:text-xl text-sm flex justify-center">
+  <p className="text-center w-[70%] sm:w-[75%] md:w-[60%] lg:w-[50%]">
+    Find your first job and internship here, to get started with your career
+  </p>
+</div>
       <div className='flex items-center justify-center w-full'>
   <div className='flex items-center justify-center w-full sm:w-[75%] md:w-[50%] lg:w-[40%] mt-5 '>
     <input 
       type="text"
       placeholder='Find your dream job' 
-      className='w-[45%] sm:w-[60%] px-4 py-2 border border-gray-300 rounded-md shadow-lg'
+      className=' w-[45%] sm:w-[60%] px-4 py-2 border border-gray-300 rounded-md shadow-lg'
     />
     <Button className='rounded-md w-11 sm:w-12 bg-[#6A38C2] shadow-lg'>
       <Search className="w-[105%]" />
     </Button>
   </div>
 </div>
+
+
+
+
+
     </div>
   );
 }
