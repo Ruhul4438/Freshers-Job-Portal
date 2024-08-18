@@ -21,13 +21,12 @@ function Navbar() {
         </div>
         <div className="flex items-center gap-4">
           <ul className="flex items-center gap-5 font-medium text-sm sm:text-xl cursor-pointer">
-            <li className="hidden sm:inline text-slate-700 hover:underline">
-              Home
+            <li className="hidden sm:inline text-slate-700 hover:underline"><Link to= "/">Home</Link>
+              
             </li>
-            <li className=" sm:inline text-slate-700 hover:underline">Jobs</li>
-            <li className=" sm:inline text-slate-700 hover:underline">
-              Browser
-            </li>
+            <li className=" sm:inline text-slate-700 hover:underline"><Link to="/jobs">Jobs</Link></li>
+            <li className=" sm:inline text-slate-700 hover:underline"><Link to="/browse">Browse</Link></li>
+            
           </ul>
           {!user ? (
             <div className="flex items-center gap-3">
