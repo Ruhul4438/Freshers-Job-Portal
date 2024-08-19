@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { setLoading } from "@/redux/authSlice";
+import { setLoading, setUser } from "@/redux/authSlice";
 import { Button } from "../ui/button";
 import { Loader, Loader2 } from "lucide-react";
 
@@ -37,7 +37,7 @@ const submitHandler = async (e) => {
             withCredentials: true,
         });
         if (res.data.success) {
-          
+          dispatch(setUser(res.data.user))
             navigate("/");
             toast.success(res.data.message);
         }

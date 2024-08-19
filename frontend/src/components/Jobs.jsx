@@ -9,7 +9,7 @@ function Jobs() {
   return (
     <div>
       <Navbar />
-      <div className="max-w-[92%]  md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto  flex flex-col   md:flex-row border border-red-500">
+      <div className="max-w-[92%]  md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto  flex flex-col   md:flex-row border border-red-500">
         {/* Filter card */}
         <div className=" md:w-[32%] border border-green-500">
         <div className="sticky top-5">
