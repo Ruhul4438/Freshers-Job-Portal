@@ -1,21 +1,21 @@
 import React from 'react'
 import { Badge } from './ui/badge'
 
-function LatestJobCards() {
+function LatestJobCards({job}) {
   return (
-    <div className='p-5 rounded-xl shadow-xl bg-white border border-grey w-full sm:w-[370px] md:w-[45%] mx-auto '>
+    <div className='p-5 rounded-xl shadow-xl bg-white border border-grey w-full sm:w-[370px] md:w-[45%] cursor-pointer '>
         <div >
-        <h1>Company Name</h1>
-        <p>India</p>
+        <h1>{job?.company?.name}</h1>
+        <p>{job?.location}</p>
         </div>
         <div>
-            <h1>Job Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fuga accusamus quam cum ipsam distinctio at. Veritatis voluptatem cupiditate quia. Similique vitae temporibus laudantium ducimus sapiente iure aliquam iusto quibusdam.</p>
+            <h1 className='text-xl font-medium pt-1 pb-2'>{job?.title}</h1>
+            <p>{job?.description}</p>
         </div>
         <div className='flex items-center gap-2 mt-4'>
-            <Badge className={'text-blue-700 font-bold'} variant= {"outline"}>12 Position</Badge>
-            <Badge className={'text-[#F83002] font-bold'} variant= {"outline"}>Full Time</Badge>
-            <Badge className={'text-[#7209b7] font-bold'} variant= {"outline"}>5 LPA</Badge>
+            <Badge className={'text-blue-700 font-bold'} variant= {"outline"}>{job?.position} Position</Badge>
+            <Badge className={'text-[#F83002] font-bold'} variant= {"outline"}>{job?.jobType}</Badge>
+            <Badge className={'text-[#7209b7] font-bold'} variant= {"outline"}>{job?.salary} LPA</Badge>
         </div>
     </div>
   )

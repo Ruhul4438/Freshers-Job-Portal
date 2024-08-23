@@ -143,12 +143,13 @@ function Signup() {
 
             <div className="sm:pl-16">
               <div className="flex items-center mt-3 gap-2 ">
-                <Label>Profile</Label>
+                <Label>Profile Photo</Label>
                 <Input
                   accept="image/*"
                   type="file"
                   onChange={changeFileHandler}
                   className="cursor-pointer"
+                  required
                 />
               </div>
             </div>

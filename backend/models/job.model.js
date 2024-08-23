@@ -31,7 +31,8 @@ const jobSchema = new mongoose.Schema({
     
     category: {
         type: String,
-        required: true
+        enum:['Job','Internship'],
+        required:true
     },
     position: {
         type: Number,
