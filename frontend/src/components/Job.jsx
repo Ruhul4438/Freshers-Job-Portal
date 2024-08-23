@@ -3,8 +3,11 @@ import { Button } from './ui/button'
 import { Avatar } from './ui/avatar'
 import { AvatarImage } from '@radix-ui/react-avatar'
 import { Badge } from './ui/badge'
+import { useNavigate } from 'react-router-dom'
 
 function Job() {
+  const navigate = useNavigate();
+  const jobId = "nkhjkhklll"
   return (
     <div className=' p-5 rounded-xl shadow-xl bg-white border border-gray-300 my-2'>
       <p className='pb-3 text-sm text-gray-700 '>2 days ago</p>
@@ -30,7 +33,7 @@ function Job() {
             <Badge className={'text-[#7209b7] font-bold'} variant= {"outline"}>5 LPA</Badge>
         </div>
         <div className='mt-4'>
-          <Button >Details</Button>
+          <Button onClick={()=>navigate('/description/${jobId}')} >Details</Button>
         </div>
       
     </div>

@@ -79,7 +79,7 @@ function Navbar() {
                   <div>
                     <div className="flex  items-center">
                       <User2 />
-                      <Button variant="link">View Profile</Button>
+                      <Button variant="link"><Link to="/profile">View Profile</Link></Button>
                     </div>
                     <div className="flex items-center ">
                       <LogOut />
