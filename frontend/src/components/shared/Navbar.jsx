@@ -70,7 +70,7 @@ function Navbar() {
               <PopoverTrigger asChild>
                 <Avatar className="cursor-pointer">
                   <AvatarImage
-                    src="https://github.com/shadcn.png"
+                    src={user?.profile?.profilePhoto}
                     alt="@shadcn"
                   />
                 </Avatar>
@@ -79,19 +79,18 @@ function Navbar() {
                 <div className=" pt-2 flex flex-col items-center ">
                   <Avatar className="cursor-pointer ">
                     <AvatarImage
-                      src="https://github.com/shadcn.png"
+                      src={user?.profile?.profilePhoto}
                       alt="@shadcn"
                     />
                   </Avatar>
                   <div className="flex flex-col items-center">
                     <div className="pl-6 pr-6">
-                      <h1 className=" text-sm sm:font-bold">
-                        Ruhul Amin Takukdar
+                      <h1 className=" text-sm sm:font-bold">{user?.fullname}
                       </h1>
                     </div>
                     <div className="pl-2 pr-2">
                       <p className="text-sm text-muted-foreground sm:text-md">
-                        Lorem ipsum dolor sit, amet conjekf wjdwijwe jewkj elmdd{" "}
+                      {user?.profile?.bio}
                       </p>
                     </div>
                   </div>
