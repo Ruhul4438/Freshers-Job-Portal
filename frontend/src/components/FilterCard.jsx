@@ -97,43 +97,7 @@ function FilterCard() {
               </select>
             </div> */}
 
-            <div className="flex  gap-2 flex-wrap items-center mt-3">
-              <div >
-                <label className="font-semibold">Job Type:</label>
-                <div className="flex  sm:flex-col gap-4 ">
-                  <div className="flex  gap-2">
-                    <input
-                      type="checkbox"
-                      id="all"
-                      className="w-5"
-
-                      // checked={sidebardata.type === 'all'}
-                    />
-                    <span>Partime</span>
-                  </div>
-
-                  
-                  <div className="flex gap-2">
-                    <input
-                      type="checkbox"
-                      id="sale"
-                      className="w-5"
-                      // checked={sidebardata.type === 'sale'}
-                    />
-                    <span>Full Time</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <input
-                      type="checkbox"
-                      id="offer"
-                      className="w-5"
-                      // checked={sidebardata.offer}
-                    />
-                    <span>All</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
 
             <div className="flex  gap-2 flex-wrap items-center mt-3">
               <div >
