@@ -72,7 +72,7 @@ export const getJobById = async (req, res) => {
         if (!job) {
             return res.status(404).json({
                 message: "Jobs not found.",
-                success: false
+                success: false 
             })
         };
         return res.status(200).json({ job, success: true });
