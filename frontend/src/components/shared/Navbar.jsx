@@ -42,11 +42,25 @@ function Navbar() {
         </div>
         <div className="flex items-center gap-4">
           <ul className="flex items-center gap-5 font-medium text-sm sm:text-xl cursor-pointer">
-            <li className="hidden sm:inline text-slate-700 hover:underline"><Link to= "/">Home</Link>
+            {
+              user && user.role=== 'recruiter' ? (
+                <>
+                  <li className=" sm:inline text-slate-700 hover:underline"><Link to= "/admin/companies">Companies</Link>
               
-            </li>
-            <li className=" sm:inline text-slate-700 hover:underline"><Link to="/jobs">Jobs</Link></li>
-            <li className=" sm:inline text-slate-700 hover:underline"><Link to="/browse">Browse</Link></li>
+              </li>
+              <li className=" sm:inline text-slate-700 hover:underline"><Link to="/jobs">Jobs</Link></li>
+                </>
+              ) : (
+                <>
+                      <li className=" sm:inline text-slate-700 hover:underline"><Link to= "/">Home</Link>
+              
+              </li>
+              <li className=" sm:inline text-slate-700 hover:underline"><Link to="/jobs">Jobs</Link></li>
+              {/* <li className=" sm:inline text-slate-700 hover:underline"><Link to="/browse">Browse</Link></li> */}
+                </>
+              )
+            }
+      
             
           </ul>
           {!user ? (
