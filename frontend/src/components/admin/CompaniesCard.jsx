@@ -17,13 +17,13 @@ function CompaniesCard({companies}) {
         <AvatarImage src={companies.logo} />
       </Avatar>
     </div>
-    <div className="flex flex-col md:flex-row flex-grow justify-between items-center pl-5 gap-3 md:gap-0 border border-green-500">
-      <div className="flex flex-col max-w-[86%] md:max-w-[30%] lg:max-w-[36%] md:ml-20 lg:ml-20 xl:ml-32 2xl:ml-44 border border-red-500">
+    <div className="flex flex-col md:flex-row flex-grow justify-between items-center pl-5 gap-3 md:gap-0 ">
+      <div className="flex flex-col max-w-[86%] md:max-w-[30%] lg:max-w-[36%] md:ml-20 lg:ml-20 xl:ml-32 2xl:ml-44 ">
         <h1 className="font-bold md:font-normal   border">
           {companies.name}
         </h1>
       </div>
-      <div className=" border border-pink-500 md:mr-16 lg:mr-62 xl:mr-40 2xl:mr-60  ">
+      <div className="  md:mr-16 lg:mr-62 xl:mr-40 2xl:mr-60  ">
         <h1 className=" ">{companies.createdAt.split("T")[0]}</h1>
       </div>
     </div>
