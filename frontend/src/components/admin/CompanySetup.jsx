@@ -9,6 +9,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import useGetCompanyById from '@/hooks/useGetCompanyById';
 import { ArrowLeft, Loader2 } from 'lucide-react';
+import { toast } from 'sonner';
 
 function CompanySetup() {
     const params = useParams();
