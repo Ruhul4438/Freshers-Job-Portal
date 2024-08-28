@@ -4,8 +4,11 @@ import { AvatarImage } from "@radix-ui/react-avatar";
 import { Avatar } from "../ui/avatar";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Edit2, MoreHorizontal } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function CompaniesCard({companies}) {
+  const navigate = useNavigate();
+
   return (
     <div className="border border-gray-800 bg-white rounded-md">
   <div className="flex justify-between items-center p-2">
@@ -30,7 +33,7 @@ function CompaniesCard({companies}) {
           <MoreHorizontal />
         </PopoverTrigger>
         <PopoverContent className="w-32">
-          <div className="flex items-center gap-2 w-fit cursor-pointer">
+          <div onClick={()=> navigate(`/admin/companies/${companies._id}`)} className="flex items-center gap-2 w-fit cursor-pointer">
             <Edit2 className="w-4" />
             <span>Edit</span>
           </div>
