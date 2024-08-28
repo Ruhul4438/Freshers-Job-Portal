@@ -17,9 +17,9 @@ function CompaniesCard({companies}) {
         <AvatarImage src={companies.logo} />
       </Avatar>
     </div>
-    <div className="flex flex-col md:flex-row flex-grow justify-between items-center pl-5 gap-3 md:gap-0 ">
-      <div className="flex flex-col max-w-[86%] md:max-w-[30%] lg:max-w-[36%] md:ml-20 lg:ml-20 xl:ml-32 2xl:ml-44 ">
-        <h1 className="font-bold md:font-normal   border">
+    <div className="flex flex-col md:flex-row flex-grow md:justify-between items-start pl-5 gap-3 md:gap-0 ">
+      <div className=" flex flex-col max-w-[86%] md:max-w-[30%] lg:max-w-[36%] md:ml-20 lg:ml-20 xl:ml-32 2xl:ml-44 ">
+        <h1 className="font-bold md:font-normal   ">
           {companies.name}
         </h1>
       </div>
