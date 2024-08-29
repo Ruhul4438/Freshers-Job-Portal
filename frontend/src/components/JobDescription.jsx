@@ -92,7 +92,7 @@ function JobDescription() {
             <div className="flex justify-between items-center border border-blue-500 sm:pb-8">
               <div>
               <h1 className="text-xl sm:text-2xl font-medium text-gray-700 border  ">{singleJob?.title}</h1>
-              <h1 className=" text-sm sm:text-base font-medium text-gray-500 ">{singleJob?.company.name}</h1>
+              <h1 className=" text-sm sm:text-base font-medium text-gray-500 ">{singleJob?.company?.name}</h1>
               </div>
               <Button variant="outline" className="rounded-full " size="icon">
         <Avatar className="w-10 h-10 mt-1 sm:w-16 sm:h-16 mr-7 sm:mt-11 sm:mb-3" >

@@ -19,6 +19,7 @@ const jobSchema = new mongoose.Schema({
     experienceLevel:{
         type:String,
         required:true,
+        default: "Fresher",
     },
     location: {
         type: String,

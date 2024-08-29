@@ -27,12 +27,12 @@ function AdminJobs() {
                     <div className='border border-red-500'>
                     <Input
                         className="max-w-[67%] md:max-w-fit text-xs sm:text-sm md:text-base"
-                        placeholder="Filter by name"
+                        placeholder="Filter by name and role"
                         onChange={(e) => setInput(e.target.value)}
                     />
                     </div>
                     
-                    <Button className="text-xs sm:text-sm md:text-base" onClick={() => navigate("/admin/companies/create")}>New Company</Button>
+                    <Button className="text-xs sm:text-sm md:text-base" onClick={() => navigate("/admin/jobs/create")}>New Job</Button>
                     </div>
                
                 <AdminJobsTable/>
