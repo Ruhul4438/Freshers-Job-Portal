@@ -21,7 +21,7 @@ function Job({job}) {
       <div className='flex items-center gap-4'>
       <Button variant="outline" className="rounded-full" size="icon">
         <Avatar >
-          <AvatarImage src="https://www.shutterstock.com/image-vector/circle-line-simple-design-logo-600nw-2174926871.jpg"/>
+          <AvatarImage src={job?.company?.logo}/>
         </Avatar>
       </Button>
       <div>

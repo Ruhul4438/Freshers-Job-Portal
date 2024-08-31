@@ -1,18 +1,18 @@
 import React from 'react'
 import { Badge } from './ui/badge'
 
-function AppliedJobCard() {
+function AppliedJobCard({appliedJob}) {
   return (
     <div className='' >
         <div className='flex justify-between items-center rounded-md border border-grey-800 bg-white ' >
             <div className='flex flex-col  sm:flex sm:justify-evenly sm:gap-2 md:gap-2 pl-5'>
-            <h1>12/4/2024</h1>
-            <h1>Frontend Developer</h1>
-            <h1>Amazon</h1>
+            <h1>{appliedJob?.createdAt?.split("T")[0]}</h1>
+            <h1>{appliedJob.job?.title}</h1>
+            <h1>{appliedJob.job?.company?.name}</h1>
             </div>
             
             <div className='mr-12'>
-            <Badge className={'text-blue-700 font-bold'} variant= {"outline"}>Accepted</Badge>
+            <Badge className={`${appliedJob?.status === "rejected" ? 'bg-red-400' : appliedJob.status === 'pending' ? 'bg-gray-400' : 'bg-green-400'}`}>{appliedJob.status.toUpperCase()}</Badge>
             </div>
             
         </div>

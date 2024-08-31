@@ -9,10 +9,12 @@ import { Label } from './ui/label';
 import AppliedJobTable from './AppliedJobTable'
 import UpdateProfileDialog from './UpdateProfileDialog';
 import { Dialog } from './ui/dialog';
+import useGetAppliedJobs from '@/hooks/useGetAppliedJobs.jsx';
 
 const isResume = true;
 
 function Profile() {
+    useGetAppliedJobs();
     const [open, setOpen] = useState(false);
     const {user} = useSelector(store=>store.auth);
   return (
