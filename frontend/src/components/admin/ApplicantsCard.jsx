@@ -5,11 +5,28 @@ import { Avatar } from "../ui/avatar";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Edit2, Eye, MoreHorizontal } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { APPLICATION_API_END_POINT } from "@/utils/constant";
+import axios from "axios";
+import { toast } from "sonner";
+
+const shortlistingStatus = ["Accepted", "Rejected"];
 
 function ApplicantsCard({ item }) {
-  const navigate = useNavigate();
+ 
+  const statusHandler = async (status, id) => {
+    console.log('called');
+    try {
+        axios.defaults.withCredentials = true;
+        const res = await axios.post(`${APPLICATION_API_END_POINT}/status/${id}/update`, { status });
+        console.log(res);
+        if (res.data.success) {
+            toast.success(res.data.message);
+        }
+    } catch (error) {
+        toast.error(error.response.data.message);
+    }
+}
   return (
-
     <div className="border border-gray-800 bg-white rounded-md mx-2">
       <div className="flex justify-between items-center p-2">
         <div className="flex flex-col md:flex-row md:flex-wrap items-start gap-3 md:gap-6 w-full border border-blue-400">
@@ -17,8 +34,8 @@ function ApplicantsCard({ item }) {
             <h1 className="font-normal ">{item?.applicant?.fullname}</h1>
           </div>
           <div className="flex flex-col max-w-[86%] md:w-[37%] lg:w-[25%] border border-blue-600">
-        <h1 className="font-normal">{item?.applicant?.email}</h1>
-      </div>
+            <h1 className="font-normal">{item?.applicant?.email}</h1>
+          </div>
 
           <div className="flex flex-col max-w-[86%] md:w-[30%] lg:w-[10%] border border-blue-600 ">
             <h1 className="">{item?.applicant?.phoneNumber}</h1>
@@ -38,10 +55,7 @@ function ApplicantsCard({ item }) {
             )}
           </div>
           <div className="flex flex-col max-w-[86%] md:w-[30%] lg:w-[10%] border border-blue-600">
-          <h1 >
-          {item?.applicant.createdAt.split("T")[0]}
-            </h1>
-
+            <h1>{item?.applicant.createdAt.split("T")[0]}</h1>
           </div>
         </div>
 
@@ -51,20 +65,17 @@ function ApplicantsCard({ item }) {
               <MoreHorizontal />
             </PopoverTrigger>
             <PopoverContent className="w-32">
-              <div
-                onClick={() => navigate(`/admin/companies/${job._id}`)}
-                className="flex items-center gap-2 w-fit cursor-pointer"
-              >
-                <Edit2 className="w-4" />
-                <span>Edit</span>
-              </div>
-              <div
-                onClick={() => navigate(`/admin/jobs/${job._id}/applicants`)}
-                className="flex items-center w-fit gap-2 cursor-pointer mt-2"
-              >
-                <Eye className="w-4" />
-                <span>Applicants</span>
-              </div>
+              {shortlistingStatus.map((status, index) => {
+                return (
+                  <div
+                    onClick={() => statusHandler(status, item?._id)}
+                    key={index}
+                    className="flex w-fit items-center my-2 cursor-pointer"
+                  >
+                    <span>{status}</span>
+                  </div>
+                );
+              })}
             </PopoverContent>
           </Popover>
         </div>
