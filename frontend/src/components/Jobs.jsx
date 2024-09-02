@@ -125,7 +125,7 @@ function Jobs() {
                   {!isVisible && (
                     <button
                       onClick={toggleContent}
-                      className="  sm:hidden bg-gray-700 text-white flex items-center align-middle rounded-md"
+                      className="  md:hidden bg-gray-700 text-white flex items-center align-middle rounded-md"
                     >
                       <span className="px-2">
                         {isVisible ? "Filter" : "Filter"}

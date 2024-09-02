@@ -21,15 +21,18 @@ function Profile() {
     <div>
         <Navbar />
             <div className='max-w-[95%] sm:max-w-4xl mx-auto bg-white border border-red-500 rounded-2xl my-5 p-8 '>
-                <div className='flex justify-between'>
-                    <div className='flex items-center gap-4'>
-                        <Avatar className="h-24 w-24">
+                <div className='flex justify-between border border-red-500'>
+                    <div className='flex flex-col md:flex-row items-start gap-4'>
+                        <Avatar className="h-24 w-24 border border-yellow-500">
                             {/* <AvatarImage src="https://www.shutterstock.com/image-vector/circle-line-simple-design-logo-600nw-2174926871.jpg" alt="profile" /> */}
                             <AvatarImage src={user?.profile?.profilePhoto} alt="profile" />
                         </Avatar>
                         <div>
-                            <h1 className='font-medium text-xl'>{user?.fullname}</h1>
-                            <p>{user?.profile?.bio}</p>
+                            <span className='font-medium text-xl border '>{user?.fullname}</span>
+                            <div className='w-[120%] md:w-full'>
+                            <p className='border border-blue-400 mt-4'>{user?.profile?.bio}</p>
+
+                            </div>
                         </div>
                     </div>
                 
