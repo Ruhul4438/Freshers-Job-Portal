@@ -38,11 +38,30 @@ export const postJob = async (req, res) => {
 export const getAllJobs = async (req, res) => {
     try {
         const keyword = req.query.keyword || "";
+        let category = req.query.category;
+
+        const location = req.query.location || '';
+        const salaryRange = req.query.salaryRange || 'all';
+  
+      if (category === undefined || category === 'all') {
+        category = { $in: ['Job', 'Internship'] };
+      }
+
+      let salaryQuery = {};
+      if (salaryRange === '0-1Lakh') {
+          salaryQuery = { salary: { $lte: 100000 } };
+      } else if (salaryRange === '2-4Lakh') {
+          salaryQuery = { salary: { $gte: 200000, $lte: 400000 } };
+      }
+
         const query = {
             $or: [
                 { title: { $regex: keyword, $options: "i" } },
                 { description: { $regex: keyword, $options: "i" } },
-            ]
+            ],
+            category,
+            location :{ $regex: location, $options: 'i' },
+            ...salaryQuery
         };
         const jobs = await Job.find(query).populate({
             path: "company"
@@ -71,7 +90,7 @@ export const getJobById = async (req, res) => {
             .populate("company");
         if (!job) {
             return res.status(404).json({
-                message: "Jobs not found.",
+                message: "Jobs not foundsss.",
                 success: false 
             })
         };

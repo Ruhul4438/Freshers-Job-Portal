@@ -37,7 +37,11 @@ function Job({job}) {
       <div className='flex items-center gap-2 mt-4'>
             <Badge className={'text-blue-700 font-bold'} variant= {"outline"}>{job?.position} Positions</Badge>
             <Badge className={'text-[#F83002] font-bold'} variant= {"outline"}>{job?.jobType}</Badge>
-            <Badge className={'text-[#7209b7] font-bold'} variant= {"outline"}>{job?.salary} LPA</Badge>
+            {(job?.category) === "Internship"
+          ? <Badge className={'text-[#7209b7] font-bold'} variant={"outline"}>{job?.salary} /month</Badge>
+          : <Badge className={'text-[#7209b7] font-bold'} variant={"outline"}>{job?.salary} PA</Badge>
+        }
+
         </div>
         <div className='mt-4'>
           <Button onClick={()=>navigate(`/description/${job?._id}`)} >Details</Button>

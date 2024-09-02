@@ -128,7 +128,7 @@ function JobDescription() {
                 SALARY</h1>}
              
              <div className="flex">
-             {(singleJob?.category) == "Internship"? <span className="text-sm  mx-auto" >{singleJob?.salary} /month</span> : <span className="text-sm  mx-auto">{singleJob?.salary} LPA</span>}
+             {(singleJob?.category) == "Internship"? <span className="text-sm  mx-auto" >{singleJob?.salary} /month</span> : <span className="text-sm  mx-auto">{singleJob?.salary} PA</span>}
              </div>
            
              </div>

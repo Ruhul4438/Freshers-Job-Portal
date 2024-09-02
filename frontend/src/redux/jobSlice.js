@@ -7,7 +7,8 @@ const jobSlice = createSlice({
        singleJob:null, 
        allAdminJobs:[],
        searchJobByText:"",
-       allAppliedJobs:[]
+       allAppliedJobs:[],
+       searchedQuery:""
     },
     reducers:{
         // actions
@@ -26,6 +27,9 @@ const jobSlice = createSlice({
         setAllAppliedJobs:(state,action) => {
             state.allAppliedJobs = action.payload;
         },
+        setSearchedQuery:(state,action) => {
+            state.searchedQuery = action.payload;
+        }
        
     }
 });
@@ -34,6 +38,7 @@ export const {
     setSingleJob,
     setAllAdminJobs,
     setSearchJobByText,
-    setAllAppliedJobs
+    setAllAppliedJobs,
+    setSearchedQuery
 } = jobSlice.actions;
 export default jobSlice.reducer;
