@@ -132,7 +132,7 @@ function PostJob() {
             />
           </div>
           <div>
-            <Label>Location</Label>
+            <Label>Location ( *city )</Label>
             <Input
               type="text"
               name="location"
@@ -142,7 +142,7 @@ function PostJob() {
             />
           </div>
           <div>
-            <Label>Duration</Label>
+            <Label>Duration ( *per time, full time, /months )</Label>
             <Input
               type="text"
               name="jobType"
