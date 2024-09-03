@@ -257,7 +257,7 @@ function JobDescription() {
           </div>
           <div className="mb-2 flex flex-col text-lg justify-center">
             <h1 className="font-bold my-1">Skills:</h1>
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               {singleJob?.requirements.map((item, index) => (
                 <span
                   key={index}
