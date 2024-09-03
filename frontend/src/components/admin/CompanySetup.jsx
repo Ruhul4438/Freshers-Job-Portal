@@ -126,7 +126,7 @@ function CompanySetup() {
               name="location"
               value={input.location}
               onChange={changeEventHandler}
-              required
+             
             />
           </div>
           
@@ -141,7 +141,7 @@ function CompanySetup() {
                   type="file"
                   onChange={changeFileHandler}
                   className="cursor-pointer"
-                  required
+                 
                 />
               </div>
             </div>
