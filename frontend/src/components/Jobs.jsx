@@ -15,6 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { JOB_API_END_POINT } from "@/utils/constant";
 import { useNavigate } from "react-router-dom";
+import Footer from "./shared/Footer";
 
 
 
@@ -113,7 +114,7 @@ function Jobs() {
   return (
     <div>
       <Navbar />
-      <div className="max-w-[92%]  md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto  flex flex-col   md:flex-row mt-4  ">
+      <div className="min-h-screen max-w-[92%]  md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto  flex flex-col   md:flex-row mt-4  ">
         {/* Filter card */}
         {/* <div className=" md:w-[32%] bg-red-400"> */}
           
@@ -292,6 +293,7 @@ function Jobs() {
         </div>
       </div>
 
+<Footer/>
      
     </div>
   );

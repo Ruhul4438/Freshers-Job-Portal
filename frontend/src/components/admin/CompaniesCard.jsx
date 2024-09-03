@@ -10,7 +10,7 @@ function CompaniesCard({companies}) {
   const navigate = useNavigate();
 
   return (
-    <div className="border border-gray-800 bg-white rounded-md">
+    <div className="border border-gray-300 bg-white rounded-md">
   <div className="flex justify-between items-center p-2">
     <div className="flex items-center">
       <Avatar className="md:w-16 md:h-16 border">
@@ -27,7 +27,7 @@ function CompaniesCard({companies}) {
         <h1 className=" ">{companies.createdAt.split("T")[0]}</h1>
       </div>
     </div>
-    <div className="mr-2 md:mr-12 border border-orange-600">
+    <div className="mr-2 md:mr-12 ">
       <Popover>
         <PopoverTrigger>
           <MoreHorizontal />

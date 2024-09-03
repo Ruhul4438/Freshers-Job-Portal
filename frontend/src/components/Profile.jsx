@@ -20,17 +20,17 @@ function Profile() {
   return (
     <div>
         <Navbar />
-            <div className='max-w-[95%] sm:max-w-4xl mx-auto bg-white border border-red-500 rounded-2xl my-5 p-8 '>
-                <div className='flex justify-between border border-red-500'>
+            <div className='max-w-[95%] sm:max-w-4xl mx-auto bg-white border border-gray-300 rounded-2xl my-5 p-8 '>
+                <div className='flex justify-between '>
                     <div className='flex flex-col md:flex-row items-start gap-4'>
-                        <Avatar className="h-24 w-24 border border-yellow-500">
+                        <Avatar className="h-24 w-24 border ">
                             {/* <AvatarImage src="https://www.shutterstock.com/image-vector/circle-line-simple-design-logo-600nw-2174926871.jpg" alt="profile" /> */}
                             <AvatarImage src={user?.profile?.profilePhoto} alt="profile" />
                         </Avatar>
                         <div>
-                            <span className='font-medium text-xl border '>{user?.fullname}</span>
+                            <span className='font-medium text-xl  '>{user?.fullname}</span>
                             <div className='w-[120%] md:w-full'>
-                            <p className='border border-blue-400 mt-4'>{user?.profile?.bio}</p>
+                            <p className=' mt-4'>{user?.profile?.bio}</p>
 
                             </div>
                         </div>
@@ -65,7 +65,7 @@ function Profile() {
             </div>
             <div className='w-[95%] sm:max-w-4xl mx-auto bg-transparent rounded-2xl '>
                 <h1 className='font-bold text-lg my-5 pl-5 pt-3 '>Applied Jobs</h1>
-                {/* Applied Job Table   */}
+                
                 <AppliedJobTable/>
             </div>
             <UpdateProfileDialog open={open} setOpen={setOpen}/>

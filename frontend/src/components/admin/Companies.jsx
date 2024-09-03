@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import useGetAllCompanies from '@/hooks/useGetAllCompanies'
 import { useDispatch } from 'react-redux'
 import { setSearchCompanyByText } from '@/redux/companySlice'
+import Footer from '../shared/Footer'
 
 function Companies() {
   useGetAllCompanies()
@@ -21,9 +22,9 @@ function Companies() {
   return (
     <div>
       <Navbar />
-            <div className='max-w-[90%] sm:max-w-[75%] md:max-w-[75%] lg:max-w-[64%] xl:max-w-[64%] 2xl:max-w-[60%] mx-auto my-10 border border-red-500'>
+            <div className='min-h-screen max-w-[90%] sm:max-w-[75%] md:max-w-[75%] lg:max-w-[64%] xl:max-w-[64%] 2xl:max-w-[60%] mx-auto my-10 rounded-lg '>
                 <div className='flex items-center justify-between my-5'>
-                    <div className='border border-red-500'>
+                    <div className=' '>
                     <Input
                         className="max-w-[67%] md:max-w-fit text-xs sm:text-sm md:text-base"
                         placeholder="Filter by name"
@@ -36,6 +37,7 @@ function Companies() {
                
                 <CompaniesTable/>
             </div>
+            <Footer/>
       </div>
   )
 }

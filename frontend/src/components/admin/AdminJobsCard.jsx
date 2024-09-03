@@ -10,7 +10,7 @@ export default function AdminJobsCard({ job }) {
   const navigate = useNavigate();
 
   return (
-    <div className="border border-gray-800 bg-white rounded-md">
+    <div className="border border-gray-300 bg-white rounded-md">
       <div className="flex justify-between items-center p-2">
         <div className="flex flex-col md:flex-row items-start gap-3 md:gap-6 w-full">
           <div className="max-w-[86%] flex-shrink-0 md:w-[30%] lg:w-[25%] ">
@@ -26,7 +26,7 @@ export default function AdminJobsCard({ job }) {
           </div>
         </div>
 
-        <div className="mr-2 md:mr-12 border border-orange-600">
+        <div className="mr-2 md:mr-12 ">
           <Popover>
             <PopoverTrigger>
               <MoreHorizontal />

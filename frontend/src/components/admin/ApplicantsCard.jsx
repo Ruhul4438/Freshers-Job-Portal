@@ -27,23 +27,23 @@ function ApplicantsCard({ item }) {
     }
 }
   return (
-    <div className="border border-gray-800 bg-white rounded-md mx-2">
+    <div className="border border-gray-400 bg-white rounded-md mx-2">
       <div className="flex justify-between items-center p-2">
-        <div className="flex flex-col md:flex-row md:flex-wrap items-start gap-3 md:gap-6 w-full border border-blue-400">
-          <div className="flex flex-col max-w-[86%] md:w-[20%] lg:w-[12%] border border-blue-600">
+        <div className="flex flex-col md:flex-row md:flex-wrap items-start gap-3 md:gap-6 w-full ">
+          <div className="flex flex-col max-w-[86%] md:w-[20%] lg:w-[14%] ">
             <h1 className="font-normal ">{item?.applicant?.fullname}</h1>
           </div>
-          <div className="flex flex-col max-w-[86%] md:w-[37%] lg:w-[25%] border border-blue-600">
+          <div className="flex flex-col max-w-[86%] md:w-[37%] lg:w-[25%] ">
             <h1 className="font-normal">{item?.applicant?.email}</h1>
           </div>
 
-          <div className="flex flex-col max-w-[86%] md:w-[30%] lg:w-[10%] border border-blue-600 ">
+          <div className="flex flex-col max-w-[86%] md:w-[30%] lg:w-[10%]  ">
             <h1 className="">{item?.applicant?.phoneNumber}</h1>
           </div>
-          <div className="flex flex-col max-w-[86%] md:w-[20%] lg:w-[15%] border border-blue-600">
+          <div className="flex flex-col max-w-[86%] md:w-[20%] lg:w-[15%] ">
             {item.applicant?.profile?.resume ? (
               <a
-                className=""
+                className="text-blue-600 cursor-pointer"
                 href={item?.applicant?.profile?.resume}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,12 +54,12 @@ function ApplicantsCard({ item }) {
               <span>NA</span>
             )}
           </div>
-          <div className="flex flex-col max-w-[86%] md:w-[30%] lg:w-[10%] border border-blue-600">
+          <div className="flex flex-col max-w-[86%] md:w-[30%] lg:w-[10%] ">
             <h1>{item?.applicant.createdAt.split("T")[0]}</h1>
           </div>
         </div>
 
-        <div className="mr-2 md:mr-12 border border-orange-600">
+        <div className="mr-2 md:mr-12 ">
           <Popover>
             <PopoverTrigger>
               <MoreHorizontal />

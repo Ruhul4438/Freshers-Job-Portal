@@ -4,7 +4,7 @@ import { Badge } from './ui/badge'
 function AppliedJobCard({appliedJob}) {
   return (
     <div className='' >
-        <div className='flex justify-between items-center rounded-md border border-grey-800 bg-white ' >
+        <div className='py-2 flex justify-between items-center rounded-md border border-grey-800 bg-white ' >
             <div className='flex flex-col  sm:flex sm:justify-evenly sm:gap-2 md:gap-2 pl-5'>
             <h1>{appliedJob?.createdAt?.split("T")[0]}</h1>
             <h1>{appliedJob.job?.title}</h1>

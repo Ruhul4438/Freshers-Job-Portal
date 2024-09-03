@@ -20,7 +20,7 @@ function AdminJobsTable() {
     },[allAdminJobs,searchJobByText])
   
   return (
-    <div className='flex  flex-col gap-4 border border-blue-500'>
+    <div className='flex  flex-col gap-4 '>
     {
       filterJobs?.map((filterJobs, index) =>(
         <div key={filterJobs?._id}>
@@ -28,7 +28,7 @@ function AdminJobsTable() {
         </div>
       ))
   }
-  <h1 className=" border mx-auto  mt-3 mb-3 text-gray-600 md:text-xl font-medium">
+  <h1 className="  mx-auto  mt-3 mb-3 text-gray-600 md:text-xl font-medium">
   A list of your recent  posted jobs
       </h1>
   </div>

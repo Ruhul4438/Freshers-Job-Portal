@@ -40,13 +40,13 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="w-full sm:text-xl text-sm flex justify-center">
-        <p className="text-center w-[70%] sm:w-[75%] md:w-[60%] lg:w-[50%]">
+      <div className="w-full sm:text-xl text-sm flex justify-center mt-5 ">
+        <p className="text-center w-[70%] sm:w-[75%] md:w-[60%] lg:w-[50%] ">
           Find your first job and internship here, to get started with your
-          career
+          career...
         </p>
       </div>
-      <div className="flex items-center justify-center w-full">
+      <div className="flex items-center justify-center w-full mt-4">
         <div className="flex items-center justify-center w-full sm:w-[75%] md:w-[50%] lg:w-[40%] mt-5 ">
           <input
             type="text"

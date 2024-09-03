@@ -17,6 +17,7 @@ import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ArrowLeft, Loader2 } from "lucide-react";
+import Footer from "../shared/Footer";
 
 function PostJob() {
   const [input, setInput] = useState({
@@ -74,7 +75,7 @@ function PostJob() {
   return (
     <div>
       <Navbar />
-      <div className="max-w-lg mx-auto ">
+      <div className="min-h-screen max-w-lg mx-auto ">
       
         <div className='flex '>
         <div className='flex flex-col items-start  pt-8 pl-4 pb-5 '>
@@ -141,7 +142,7 @@ function PostJob() {
             />
           </div>
           <div>
-            <Label>Job Type</Label>
+            <Label>Duration</Label>
             <Input
               type="text"
               name="jobType"
@@ -243,6 +244,7 @@ function PostJob() {
           )}
         </form>
       </div>
+      <Footer/>
     </div>
   );
 }

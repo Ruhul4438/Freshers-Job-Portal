@@ -9,6 +9,7 @@ import { COMPANY_API_END_POINT } from '@/utils/constant'
 import { toast } from 'sonner'
 import { useDispatch } from 'react-redux'
 import { setSingleCompany } from '@/redux/companySlice'
+import Footer from '../shared/Footer'
 
 function CompanyCreate() {
     const navigate = useNavigate();
@@ -33,9 +34,9 @@ function CompanyCreate() {
         }
     }
   return (
-    <div>
+    <div >
         <Navbar />
-            <div className='max-w-[90%] sm:max-w-4xl md:max-w-[70%] mx-auto '>
+            <div className='min-h-screen mt-auto max-w-[90%] sm:max-w-4xl md:max-w-[80%] mx-auto  '>
                 <div className='my-10'>
                     <h1 className='font-bold text-2xl'>Your Company Name</h1>
                     <p className='text-gray-500'>What would you like to give your company name? you can change this later.</p>
@@ -44,7 +45,7 @@ function CompanyCreate() {
                 <Label>Company Name</Label>
                 <Input
                     type="text"
-                    className="my-2"
+                    className="my-2 border  md:w-[70%] lg:w-[50%]"
                     placeholder="JobHunt, Microsoft etc."
                     onChange={(e) => setCompanyName(e.target.value)}
                 />
@@ -53,6 +54,7 @@ function CompanyCreate() {
                     <Button onClick={registerNewCompany}>Continue</Button>
                 </div>
             </div>
+            <Footer/>
     </div>
   )
 }

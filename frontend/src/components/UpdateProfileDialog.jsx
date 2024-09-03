@@ -146,8 +146,8 @@ function UpdateProfileDialog({ open, setOpen }) {
             <DialogTitle>Update Profile</DialogTitle>
           </DialogHeader>
           <form onSubmit={submitHandler}>
-            <div className="flex flex-col items-center justify-center gap-4 border border-blue-500">
-            <div className="flex flex-col items-center   border border-red-500">
+            <div className="flex flex-col items-center justify-center gap-4 ">
+            <div className="flex flex-col items-center ">
                 
                 <Input
                   id="file"

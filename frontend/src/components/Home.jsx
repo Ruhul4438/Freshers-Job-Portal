@@ -21,9 +21,12 @@ function Home() {
   return (
     <div>
         <Navbar/>
+        <div className='min-h-screen  mx-2 mb-2'>
         <HeroSection/>
         <CategoryCarousel/>
         <LatestJobs/>
+        </div>
+        
         <Footer/>
     </div>
   )

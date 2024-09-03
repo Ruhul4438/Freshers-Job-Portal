@@ -90,7 +90,7 @@ function Navbar() {
                   />
                 </Avatar>
               </PopoverTrigger>
-              <PopoverContent className="w-52 mr-4 sm:w-80 bg-white  rounded-2xl">
+              <PopoverContent className="w-52 mr-4 sm:w-80 bg-white  rounded-2xl z-[60]">
                 <div className=" pt-2 flex flex-col items-center ">
                   <Avatar className="cursor-pointer ">
                     <AvatarImage
@@ -104,7 +104,7 @@ function Navbar() {
                         {user?.fullname}
                       </h1>
                     </div>
-                    <div className="pl-2 pr-2 border  mx-2 mb-2">
+                    <div className="pl-2 pr-2 mx-2 mb-2 line-clamp-3">
                       <p className="text-sm text-muted-foreground sm:text-md">
                         {user?.profile?.bio}
                       </p>

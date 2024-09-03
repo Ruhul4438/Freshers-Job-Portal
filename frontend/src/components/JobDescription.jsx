@@ -96,7 +96,7 @@ function JobDescription() {
           <div>
             <div className="flex justify-between items-center  md:pb-2">
               <div>
-                <h1 className="text-xl sm:text-2xl font-medium text-gray-700 border  ">
+                <h1 className="text-xl sm:text-2xl font-medium text-gray-700   ">
                   {singleJob?.title}
                 </h1>
                 <h1 className=" text-sm sm:text-base mt-2 font-medium text-gray-500 ">
