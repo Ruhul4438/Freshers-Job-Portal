@@ -112,7 +112,7 @@ function PostJob() {
             />
           </div>
           <div>
-            <Label>Requirements</Label>
+            <Label>Requirements ( *skills )</Label>
             <Input
               type="text"
               name="requirements"

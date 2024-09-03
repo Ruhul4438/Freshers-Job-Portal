@@ -12,7 +12,7 @@ function LatestJobCards({job}) {
         </div>
         <div>
             <h1 className='text-xl font-medium pt-1 pb-2 line-clamp-2'>{job?.title}</h1>
-            <p>{job?.description}</p>
+            <p className='line-clamp-2'>{job?.description}</p>
         </div>
         <div className='flex items-center gap-2 mt-4'>
             <Badge className={'text-blue-700 font-bold'} variant= {"outline"}>{job?.position} Position</Badge>
