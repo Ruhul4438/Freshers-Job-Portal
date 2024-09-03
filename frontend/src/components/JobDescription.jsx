@@ -86,33 +86,33 @@ function JobDescription() {
   return (
     <div>
       <Navbar />
-      <div className=" max-w-full sm:max-w-7xl mx-auto mt-10 border border-blue-600 mb-5">
+      <div className=" max-w-full sm:max-w-7xl mx-auto mt-10  mb-5">
         <h1 className="flex justify-start pl-4 sm:pl-0 sm:justify-center text-2xl sm:text-3xl font-medium">
           {singleJob?.title} {singleJob?.category}
         </h1>
       </div>
-      <div className="bg-white mt-2 w-[95%] sm:w-7xl md:w-[95%] lg:max-w-6xl mx-auto pl-3 sm:pl-4 rounded-md border border-gray-500 ">
+      <div className="bg-white mt-2 w-[95%] sm:w-7xl md:w-[95%] lg:max-w-6xl mx-auto pl-3 sm:pl-4 rounded-md  border border-gray-200 ">
         <div className=" pb-3">
           <div>
-            <div className="flex justify-between items-center border border-blue-500 md:pb-2">
+            <div className="flex justify-between items-center  md:pb-2">
               <div>
                 <h1 className="text-xl sm:text-2xl font-medium text-gray-700 border  ">
                   {singleJob?.title}
                 </h1>
-                <h1 className=" text-sm sm:text-base font-medium text-gray-500 ">
+                <h1 className=" text-sm sm:text-base mt-2 font-medium text-gray-500 ">
                   {singleJob?.company?.name}
                 </h1>
               </div>
              
-              <Avatar className="w-10 h-10 mt-1 sm:w-16 sm:h-16 mr-7  sm:mt-4 sm:mb-3 border border-red-500">
+              <Avatar className="w-10 h-10 mt-1 sm:w-16 sm:h-16 mr-7  sm:mt-4 sm:mb-3 border">
                 <AvatarImage src={singleJob?.company?.logo} />
               </Avatar>
               
             </div>
 
-            <div className=" flex flex-wrap items-center gap-4 mt-7 border border-gray-500 mb-5 ">
+            <div className=" flex flex-wrap items-center gap-8 md:gap-24 mt-7  mb-5 ">
               <div className=" ">
-                <h1 className="text-sm sm:text-md font-medium text-gray-600 border">
+                <h1 className="text-sm md:text-base font-medium text-gray-600 ">
                   <FontAwesomeIcon
                     icon={faChair}
                     className="mr-2 text-black "
@@ -123,8 +123,8 @@ function JobDescription() {
                   <span className="text-sm mx-auto">{singleJob?.position}</span>
                 </div>
               </div>
-              <div className="mx-2 sm:mx-6">
-                <h1 className="text-sm  font-medium text-gray-600">
+              <div className="">
+                <h1 className="text-sm md:text-base font-medium text-gray-600">
                   <FontAwesomeIcon
                     icon={faCalendar}
                     className="mr-2 text-black "
@@ -137,7 +137,7 @@ function JobDescription() {
               </div>
               <div>
                 {singleJob?.category == "Internship" ? (
-                  <h1 className="text-sm sm:text-md font-medium text-gray-600">
+                  <h1 className="text-sm md:text-base font-medium text-gray-600">
                     <FontAwesomeIcon
                       icon={faMoneyBill}
                       className="mr-2 text-black "
@@ -145,7 +145,7 @@ function JobDescription() {
                     STRIPENT
                   </h1>
                 ) : (
-                  <h1 className="text-sm sm:text-md font-medium text-gray-600">
+                  <h1 className="text-sm md:text-base font-medium text-gray-600 ">
                     <FontAwesomeIcon
                       icon={faMoneyBill}
                       className="mr-2 text-black "
@@ -166,8 +166,8 @@ function JobDescription() {
                   )}
                 </div>
               </div>
-              <div className=" sm:mx-6">
-                <h1 className="text-sm  font-medium text-gray-600">
+              <div className=" ">
+                <h1 className="text-sm md:text-base font-medium text-gray-600">
                   <FontAwesomeIcon
                     icon={faLocationDot}
                     className="mr-2 text-black "
@@ -181,7 +181,7 @@ function JobDescription() {
                 </div>
               </div>
             </div>
-            <span className="text-xs rounded-xl  px-3 py-1 bg-[#DAF7A6]">
+            <span className="text-xs rounded-xl  px-3 py-1 bg-[#effde6]">
               <FontAwesomeIcon
                 icon={faClockRotateLeft}
                 className="mr-2 text-black "
@@ -191,9 +191,9 @@ function JobDescription() {
                 : `Posted ${daysAgoFunction(singleJob?.createdAt)} days ago`}
             </span>
 
-            <div className=" flex  items-center gap-4 mt-4 border border-gray-500 mb-5">
-              <div className="border border-red-400">
-                <h1 className="text-sm  font-medium text-gray-600 border">
+            <div className=" flex  items-center gap-4 mt-4  mb-5">
+              <div className="">
+                <h1 className="text-sm md:text-base font-medium text-gray-600 ">
                   <FontAwesomeIcon
                     icon={faUserGroup}
                     className="mr-2 text-black "
@@ -209,7 +209,7 @@ function JobDescription() {
             </div>
           </div>
         </div>
-        <div className="border flex mb-3 mt-1">
+        <div className=" flex mb-3 mt-1">
           <div className="mx-auto">
             <Button
               onClick={isApplied ? null : applyJobHandler}
@@ -226,7 +226,7 @@ function JobDescription() {
         </div>
       </div>
 
-      <div className="bg-white mt-2 w-[95%] sm:w-7xl md:w-[95%] lg:max-w-6xl mx-auto pl-3 sm:pl-4 rounded-md border border-gray-500 mb-4">
+      <div className="bg-white mt-2 w-[95%] sm:w-7xl md:w-[95%] lg:max-w-6xl mx-auto pl-3 sm:pl-4 rounded-md border border-gray-200 mb-4">
         <div className=" my-4 pr-5 flex flex-col ">
           <h1 className="text-xl font-medium pt-2 pb-1 text-gray-500 ">
             Job Description

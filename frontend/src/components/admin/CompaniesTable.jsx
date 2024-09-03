@@ -27,6 +27,8 @@ function CompaniesTable() {
         </div>
       ))
     }
+            <h1 className=" border mx-auto mt-3 mb-3 text-gray-600 md:text-xl font-medium">A list of your recent registered companies</h1>
+
     </div>
   )
 }

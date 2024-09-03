@@ -104,7 +104,7 @@ function Navbar() {
                         {user?.fullname}
                       </h1>
                     </div>
-                    <div className="pl-2 pr-2 border border-red-500 mx-2 mb-2">
+                    <div className="pl-2 pr-2 border  mx-2 mb-2">
                       <p className="text-sm text-muted-foreground sm:text-md">
                         {user?.profile?.bio}
                       </p>
@@ -112,12 +112,14 @@ function Navbar() {
                   </div>
 
                   <div>
-                    <div className="flex  items-center">
-                      <User2 />
-                      <Button variant="link">
-                        <Link to="/profile">View Profile</Link>
-                      </Button>
-                    </div>
+                    {user && user.role === "student" && (
+                      <div className="flex  items-center">
+                        <User2 />
+                        <Button variant="link">
+                          <Link to="/profile">View Profile</Link>
+                        </Button>
+                      </div>
+                    )}
                     <div className="flex items-center ">
                       <LogOut />
                       <Button onClick={logoutHandler} variant="link">

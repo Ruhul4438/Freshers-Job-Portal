@@ -113,13 +113,15 @@ function Jobs() {
   return (
     <div>
       <Navbar />
-      <div className="max-w-[92%]  md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto  flex flex-col   md:flex-row border border-red-500">
+      <div className="max-w-[92%]  md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto  flex flex-col   md:flex-row mt-4  ">
         {/* Filter card */}
-        <div className=" md:w-[32%] border border-green-500">
-          <div className="sticky top-5">
-            {/* <FilterCard /> */}
+        {/* <div className=" md:w-[32%] bg-red-400"> */}
+          
+        <div className=" md:w-[32%] mt-4 ">
+          <div className="sticky top-5    ">
+            
             <div className="">
-              <div className=" border border-red-900 ">
+              <div className="  ">
                 {/* Button only visible on mobile screens */}
                 <div className="flex justify-center">
                   {!isVisible && (
@@ -159,9 +161,9 @@ function Jobs() {
                 <div
                   className={`${
                     isVisible ? "block" : "hidden"
-                  } md:block  bg-gray-100 p-4 rounded-md`}
+                  } md:block  bg-white p-4 rounded-md`}
                 >
-                  <div className="flex justify-center border border-yellow-400 mb-6">
+                  <div className="flex justify-center   mb-6">
                     <h1 className="text-xl font-bold">Apply Filters</h1>
                   </div>
 
@@ -269,11 +271,13 @@ function Jobs() {
             </div>
           </div>
         </div>
+        {/* </div> */}
+        
 
         {/* Jobs listing */}
-        <div className="md:w-[70%] border border-blue-500">
+        <div className="md:w-[70%]  md:ml-4">
           {filter.length <= 0 ? (
-            <span>Job not found</span>
+            <span className="flex justify-center  mt-8 md:text-xl font-medium">Job not found</span>
           ) : (
             <div className="flex-1  pb-5">
               <div className="flex flex-col">
@@ -287,6 +291,8 @@ function Jobs() {
           )}
         </div>
       </div>
+
+     
     </div>
   );
 }

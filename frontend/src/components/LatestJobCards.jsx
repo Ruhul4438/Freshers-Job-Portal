@@ -7,11 +7,11 @@ function LatestJobCards({job}) {
   return (
     <div onClick={()=> navigate(`/description/${job._id}`)} className='p-5 rounded-xl shadow-xl bg-white border border-grey w-full sm:w-[370px] md:w-[45%] cursor-pointer '>
         <div >
-        <h1>{job?.company?.name}</h1>
-        <p>{job?.location}</p>
+        <h1 className='uppercase font-medium text-gray-500'>{job?.company?.name}</h1>
+        <p className='capitalize text-sm'>{job?.location}</p>
         </div>
         <div>
-            <h1 className='text-xl font-medium pt-1 pb-2'>{job?.title}</h1>
+            <h1 className='text-xl font-medium pt-1 pb-2 line-clamp-2'>{job?.title}</h1>
             <p>{job?.description}</p>
         </div>
         <div className='flex items-center gap-2 mt-4'>
