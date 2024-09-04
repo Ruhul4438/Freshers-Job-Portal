@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Badge } from "../ui/badge";
 import { AvatarImage } from "@radix-ui/react-avatar";
 import { Avatar } from "../ui/avatar";
@@ -12,7 +12,7 @@ import { toast } from "sonner";
 const shortlistingStatus = ["Accepted", "Rejected"];
 
 function ApplicantsCard({ item }) {
- 
+  const [popoverOpen, setPopoverOpen] = useState(false);
   const statusHandler = async (status, id) => {
     console.log('called');
     try {
@@ -21,6 +21,7 @@ function ApplicantsCard({ item }) {
         console.log(res);
         if (res.data.success) {
             toast.success(res.data.message);
+            setPopoverOpen(false);
         }
     } catch (error) {
         toast.error(error.response.data.message);
@@ -60,7 +61,7 @@ function ApplicantsCard({ item }) {
         </div>
 
         <div className="mr-2 md:mr-12 ">
-          <Popover>
+          <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
             <PopoverTrigger>
               <MoreHorizontal />
             </PopoverTrigger>

@@ -25,9 +25,9 @@ function AdminJobs() {
         <Navbar />
             <div className='min-h-screen max-w-[90%] sm:max-w-[75%] md:max-w-[75%] lg:max-w-[64%] xl:max-w-[64%] 2xl:max-w-[60%] mx-auto my-10 '>
                 <div className='flex items-center justify-between my-5'>
-                    <div className='border '>
+                    <div className=''>
                     <Input
-                        className="max-w-[67%] md:max-w-fit text-xs sm:text-sm md:text-base"
+                        className="max-w-full md:max-w-fit text-xs sm:text-sm md:text-base"
                         placeholder="Filter by name and role"
                         onChange={(e) => setInput(e.target.value)}
                     />
