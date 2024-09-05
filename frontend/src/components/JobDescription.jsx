@@ -175,7 +175,7 @@ function JobDescription() {
                   LOCATION
                 </h1>
                 <div className="flex">
-                  <span className="text-sm  mx-auto">
+                  <span className="text-sm capitalize mx-auto">
                     {singleJob?.location}
                   </span>
                 </div>

@@ -38,7 +38,7 @@ function Job({ job }) {
         </Button>
         <div>
           <h1 className="uppercase font-medium text-gray-500">{job?.company?.name}</h1>
-          <p className="capitalize text-sm">{job?.company?.location}</p>
+          <p className="capitalize text-sm">{job?.location}</p>
         </div>
       </div>
       <div>

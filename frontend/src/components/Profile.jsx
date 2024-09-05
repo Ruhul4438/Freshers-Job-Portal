@@ -28,7 +28,7 @@ function Profile() {
                             <AvatarImage src={user?.profile?.profilePhoto} alt="profile" />
                         </Avatar>
                         <div>
-                            <span className='font-medium text-xl  '>{user?.fullname}</span>
+                            <span className='font-medium capitalize text-xl  '>{user?.fullname}</span>
                             <div className='w-[120%] md:w-full'>
                             <p className=' mt-4'>{user?.profile?.bio}</p>
 
@@ -50,10 +50,13 @@ function Profile() {
                 </div>
                 <div className='my-5'>
                     <h1>Skills</h1>
-                    <div className='flex items-center gap-1'>
+                    <div className='flex flex-wrap items-center gap-1'>
                         {
-                            user?.profile?.skills.length !== 0 ? user?.profile?.skills.map((item, index) => <Badge key={index}>{item}</Badge>) : <span>NA</span>
+                            
+                            user?.profile?.skills.length !== 0 ? user?.profile?.skills.map((item, index) => <Badge  key={index}>{item}</Badge>) : <span>NA</span>
                         }
+                    
+                       
                     </div>
                 </div>
                 <div className='grid w-full max-w-sm items-center gap-1.5'>

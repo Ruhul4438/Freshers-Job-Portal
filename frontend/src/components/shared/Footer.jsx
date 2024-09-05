@@ -27,7 +27,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/ruhul-amin-talukdar-4194ba252/"
+              href="https://www.linkedin.com/in/ruhulamintalukdar/"
               className="hover:text-gray-400 text-gray-300"
               aria-label="LinkedIn"
               target="_blank"
